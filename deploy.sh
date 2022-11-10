@@ -8,4 +8,8 @@ if [ -z "$BUCKET" ]
       exit 0
 fi
 
+npm i
+npm run build
+#npm start
+
 aws s3 cp build s3://$BUCKET/ --recursive --force
